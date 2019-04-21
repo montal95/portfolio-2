@@ -1,0 +1,82 @@
+.home {
+  .logo {
+    background: white;
+    height: 100px;
+    width: 200px;
+  }
+  .info-section {
+    padding: 54px;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    .info-box {
+      bottom: 60px;
+      position: absolute;
+      h4 {
+        font-size: 1.2rem;
+        color: $color3;
+        text-transform: uppercase;
+        margin: 0.7rem 0;
+      }
+      p {
+        font-size: 0.9rem;
+        font-weight: 300;
+        color: $color3;
+        margin: 0.2rem 0 1.6rem;
+      }
+    }
+  }
+  .content-area {
+    height: 100%;
+    margin-left: 35%;
+    width: 65%;
+    background: white;
+    // padding: 0 0 0 25%;
+    .img-container {
+      display: inline-block;
+      width: 30%;
+      position: relative;
+      height: 100%;
+
+      .user-img {
+        position: absolute;
+        top: 56px;
+        left: -250px;
+        width: 400px;
+        height: calc(90% - 112px);
+        background: url("../img/sam-montalvo-headshot.jpg") no-repeat center
+          center;
+        -webkit-background-size: cover;
+        -mos-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+    }
+    .profile-section {
+      width: 40%;
+      vertical-align: top;
+      display: inline-block;
+      .profile {
+          h1{
+              font-size: 2.3rem;
+              font-weight: 500;
+              line-height: 1.2;
+              margin: 0 0 1.7rem 0;
+              span{
+                  color: $color1;
+              }
+          }
+          h5{
+              font-size: 1.1rem;
+              margin: 0 0 1rem 0;
+          }
+          p{
+              color: $color5;
+              font-weight: 300;
+          }
+      }
+    }
+  }
+}

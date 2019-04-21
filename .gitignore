@@ -1,0 +1,7 @@
+package-lock.json
+/node_modules
+.cache/
+dist/
+*.css.map
+*.sass.map
+*.scss.map
