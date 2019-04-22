@@ -18,7 +18,7 @@
     <script src="./js/index.js"></script>
     <title>Sam Montalvo Jr</title>
   </head>
-  <body class="home">
+  <body class="contact">
     <!-- Menu section   -->
     <div class="menu-icon"><i class="fa fa-bars"></i></div>
     <section id="menu">
@@ -52,22 +52,39 @@
     <section class="content-area">
       <!-- Image div -->
       <div class="img-container">
-        <div class="user-img"></div>
+        <div class="form-section">
+          <h4>Send a Message</h4>
+          <form action="/" method="POST">
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="email" name="email" placeholder="E-mail" required />
+            <input type="text" name="budget" placeholder="Budget" />
+            <textarea
+              name="message"
+              rows="12"
+              placeholder="Message"
+              required
+            ></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
       </div>
 
-      <!-- Personal profile information -->
-      <div class="profile-section">
-        <div class="profile">
-          <h1>Samuel <br /><span>Montalvo Jr</span></h1>
-          <h5>Web Developer</h5>
-          <p>
-            Hi I'm Sam Montalvo Jr, a front end web developer based out of
-            Dallas, TX. I am 28 year old with his sights set on moving to
-            Chicago and mastering the full stack
-          </p>
-          <a href="./portfolio.html" class="primary-btn">Portfolio</a>
-          <a href="./resume.html" class="ghost-btn">Resume</a>
-          <a href="./contact.html" class="ghost-btn">Contact Me</a>
+      <!-- Personal contact information -->
+      <div class="contact-section">
+        <div class="contact-info">
+          <h1>Contact Me</h1>
+          <div class="contact-box">
+            <h5>Phone</h5>
+            <p>214-686-7539</p>
+          </div>
+          <div class="contact-box">
+            <h5>E-Mail</h5>
+            <p>sammontalvojr@gmail.com</p>
+          </div>
+          <div class="contact-box">
+            <h5>Location</h5>
+            <p>Dallas, TX</p>
+          </div>
         </div>
       </div>
     </section>

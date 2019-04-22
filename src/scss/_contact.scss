@@ -1,0 +1,111 @@
+.contact {
+  .info-section {
+    padding: 54px;
+    width: 35%;
+  }
+  .content-area {
+    height: 100%;
+    margin-left: 35%;
+    width: 65%;
+    background: $color3;
+    // padding: 0 0 0 25%;
+    .img-container {
+      display: inline-block;
+      width: 30%;
+      position: relative;
+      height: 100%;
+
+      .form-section {
+        position: absolute;
+        top: 56px;
+        left: -150px;
+        width: 400px;
+        height: calc(100% - 112px);
+        background: $color2;
+        color: $color3;
+        padding: 24px 46px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        -webkit-background-size: cover;
+        -mos-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        -webkit-box-shadow: 0px 20px 80px 6px rgba(0, 0, 0, 0.34);
+        -moz-box-shadow: 0px 20px 80px 6px rgba(0, 0, 0, 0.34);
+        box-shadow: 0px 20px 80px 6px rgba(0, 0, 0, 0.34);
+        h4 {
+          font-size: 1.6rem;
+          margin-bottom: 2rem;
+          margin-top: 1rem;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+          background: transparent;
+          border: none;
+          border-bottom: 2px solid $color5;
+          width: 100%;
+          margin-bottom: 2rem;
+          font-size: 0.8rem;
+          text-transform: uppercase;
+          line-height: 1.2;
+          color: $color5;
+        }
+        button[type="submit"] {
+          background-color: $color1;
+          border: none;
+          font-size: 1rem;
+          -webkit-border-radius: 30px;
+          -moz-border-radius: 30px;
+          border-radius: 30px;
+          text-align: center;
+          color: $color3;
+          padding: 17px 30px;
+          text-decoration: none;
+          text-transform: uppercase;
+          width: 100%;
+        }
+      }
+    }
+    .contact-section {
+      width: 50%;
+      vertical-align: top;
+      display: inline-block;
+      padding: 56px 0 0;
+      .contact-info {
+        h1 {
+          font-size: 2.3rem;
+          font-weight: 500;
+          line-height: 1.2;
+          margin: 0 0 1.7rem 0;
+          span {
+            color: $color1;
+          }
+        }
+        .contact-box {
+          max-width: 500px;
+          padding: 30px;
+
+          h5 {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin: 0 0 0.8rem 0;
+          }
+          p {
+            color: $color5;
+            font-weight: 300;
+            line-height: 1.4;
+            margin: 0 0 .8rem 0;
+          }
+          cursor: pointer;
+          transition: $btnTransition;
+          &:hover {
+            -webkit-box-shadow: 0px 20px 74px 6px rgba(0, 0, 0, 0.12);
+            -moz-box-shadow: 0px 20px 74px 6px rgba(0, 0, 0, 0.12);
+            box-shadow: 0px 20px 74px 6px rgba(0, 0, 0, 0.12);
+          }
+        }
+      }
+    }
+  }
+}
