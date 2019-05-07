@@ -95,7 +95,7 @@
             color: $color5;
             font-weight: 300;
             line-height: 1.4;
-            margin: 0 0 .8rem 0;
+            margin: 0 0 0.8rem 0;
           }
           cursor: pointer;
           transition: $btnTransition;
@@ -105,6 +105,182 @@
             box-shadow: 0px 20px 74px 6px rgba(0, 0, 0, 0.12);
           }
         }
+      }
+    }
+  }
+}
+
+// Mobiles
+@media (max-width: 767.99px) {
+  .contact {
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .menu-icon {
+      top: -3px;
+      color: white;
+      right: 20px;
+      .fa {
+        color: white;
+      }
+    }
+
+    .info-section {
+      // display: none;
+      padding: 10px 20px;
+      position: static;
+      .logo {
+        height: 45px;
+        width: 70px;
+        font-size: 1rem;
+      }
+      .info-box {
+        display: none;
+      }
+    }
+    .content-area {
+      width: 100%;
+      margin-left: 0;
+      height: 100%;
+      overflow: auto;
+      .contact-section {
+        width: 100%;
+        float: left;
+        padding: 20% 20px 0;
+      }
+      .img-container {
+        padding: 56px 20px 0;
+        width: 100%;
+        height: auto;
+        .form-section {
+          position: static;
+          width: 100%;
+          height: auto;
+          overflow: auto;
+        }
+      }
+    }
+  }
+}
+
+// Tablets
+@media (min-width: 768px) and (max-width: 991.99px) {
+  .contact {
+    .content-area {
+      overflow: auto;
+      &:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .contact-section {
+        width: 70%;
+        float: right;
+        padding: 20% 20px 0;
+      }
+      .img-container {
+        padding: 56px 20px 0;
+        width: 100%;
+        height: auto;
+        margin-top: 8%;
+        .form-section {
+          position: static;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// Laptops
+@media (min-width: 992px) and (max-width: 1199.99px) {
+  .contact {
+    .info-section {
+      .icon-section {
+        a {
+          font-size: 2rem;
+        }
+      }
+    }
+    .content-area {
+      overflow: auto;
+
+      &:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .contact-section {
+        width: 70%;
+        float: right;
+        padding: 20% 20px 0;
+        max-width: 650px;
+      }
+      .img-container {
+        padding: 56px 20px 0;
+        float: left;
+        height: auto;
+        width: 100%;
+        margin-top: 8%;
+        .form-section {
+          position: static;
+          width: 100%;
+          float: left;
+          height: auto;
+          overflow: auto;
+        }
+      }
+    }
+  }
+}
+
+// Large Screens
+@media (min-width: 1200px) {
+  .contact {
+    .info-section {
+    }
+    .content-area {
+      .img-container {
+        padding: 56px 20px 0;
+        float: left;
+        .form-section {
+          // position: static;
+          // width: 100%;
+        }
+      }
+      .contact-section {
+        width: 70%;
+        float: left;
+        padding: 20% 60px 0;
+        max-width: 800px;
+      }
+    }
+  }
+}
+
+//Very Large Screens
+@media (min-width: 1500px) {
+  .contact {
+    .info-section {
+    }
+    .content-area {
+      .img-container {
+        padding: 56px 20px 0;
+        float: left;
+        .form-section {
+          // position: static;
+          // width: 100%;
+          left: -150px;
+          width: 500;
+        }
+      }
+      .contact-section {
+        width: 70%;
+        float: left;
+        padding: 20% 60px 0;
+        max-width: 800px;
       }
     }
   }
