@@ -93,16 +93,20 @@
       height: 100%;
       overflow: auto;
       .profile-section {
-        width: 70%;
-        float: right;
-        padding: 20% 20px 0;
+        width: 100%;
+        height: 100;
+        // float: right;
+        align-content: center;
+        max-width: none;
+        padding: 20% 20px;
       }
       .img-container {
-        padding: 56px 20px 0;
-        .user-img {
-          position: static;
-          width: 100%;
-        }
+        display: none;
+        // padding: 56px 20px 0;
+        // .user-img {
+        //   position: static;
+        //   width: 100%;
+        // }
       }
     }
   }

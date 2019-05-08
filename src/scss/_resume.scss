@@ -50,6 +50,11 @@
 }
 // Mobiles
 @media (max-width: 767.99px) {
+  body,
+  html {
+    height: auto;
+  }
+
   .resume {
     .menu-icon {
       top: -3px;
@@ -84,9 +89,16 @@
         clear: both;
       }
       overflow: auto;
-
-      .category{
+      .scroll-section {
+        padding: 50px 20px;
         width: 100%;
+        height: auto;
+        overflow: auto;
+        .category {
+          .xp-section {
+            grid-template-columns: 1fr;
+          }
+        }
       }
     }
   }
@@ -96,16 +108,20 @@
 @media (min-width: 768px) and (max-width: 991.99px) {
   .resume {
     .content-area {
+      width: 70%;
+      margin-left: 30%;
       overflow: auto;
       &:after {
         content: "";
         display: table;
         clear: both;
       }
-      .contact-section {
-        width: 70%;
-        float: right;
-        padding: 20% 20px 0;
+      .scroll-section {
+        .category {
+          .xp-box {
+            padding: 10px;
+          }
+        }
       }
     }
   }
@@ -123,17 +139,12 @@
     }
     .content-area {
       overflow: auto;
-
+      width: 70%;
+      margin-left: 30%;
       &:after {
         content: "";
         display: table;
         clear: both;
-      }
-      .contact-section {
-        width: 70%;
-        float: right;
-        padding: 20% 20px 0;
-        max-width: 650px;
       }
     }
   }
