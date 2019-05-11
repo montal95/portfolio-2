@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/montal95/portfolio-2#readme",
   "dependencies": {
-    "node-sass": "^4.11.0"
+    "express": "^4.16.4",
+    "node-sass": "^4.11.0",
+    "server": "^1.0.18",
+    "static": "^2.0.0"
   }
 }
