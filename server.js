@@ -12,7 +12,7 @@ app.use(sassMiddleware({
 app.use("/", serveStatic(path.join(__dirname, "/dist")));
 //serve the index file by default
 app.get("/", function(req, res) {
-  res.sendFile(__dirname + "/dist/index.html");
+  res.sendFile(__dirname + "/src/index.html");
 });
 //create a default port to serve the app
 const port = process.env.PORT || 5000;
