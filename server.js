@@ -4,7 +4,7 @@ const path = require("path");
 //create the express app
 const app = express();
 //create all middleware to hander serving the app
-app.use("/", serveStatic(path.join(__dirname, "/public")));
+app.use("/", serveStatic(path.join(__dirname, "/src")));
 //serve the index file by default
 app.get("/", function(req, res) {
   res.sendFile(__dirname + "/src/index.html");
