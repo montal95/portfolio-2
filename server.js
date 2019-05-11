@@ -1,19 +1,14 @@
-const express = require("express");
-var sassMiddleware = require('node-sass-middleware');
-const serveStatic = require("serve-static");
-const path = require("path");
-//create the express app
-const app = express();
-//create all middleware to hander serving the app
-app.use(sassMiddleware({ 
-    src: __dirname,
-    dest: path.join(__dirname, '/src')
-}));
-app.use("/", serveStatic(path.join(__dirname, "/dist")));
-//serve the index file by default
-app.get("/", function(req, res) {
-  res.sendFile(__dirname + "/src/index.html");
-});
+const Bundler = require('parcel-bundler');
+const app = require('express')();
+
+const file = './src/index.html';
+const options = {};
+
+const bundler = new Bundler(file, options);
+
+// Let express use the bundler middleware, this will let Parcel handle every request over your express server
+app.use(bundler.middleware());
+
 //create a default port to serve the app
 const port = process.env.PORT || 5000;
 app.listen(port);
