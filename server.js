@@ -1,9 +1,11 @@
 const express = require("express");
+var sass = require('node-sass');
 const serveStatic = require("serve-static");
 const path = require("path");
 //create the express app
 const app = express();
 //create all middleware to hander serving the app
+app.use(sass.middleware({ src: __dirname + '/src' }));
 app.use("/", serveStatic(path.join(__dirname, "/src")));
 //serve the index file by default
 app.get("/", function(req, res) {
