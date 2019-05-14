@@ -9,91 +9,95 @@
     overflow: hidden;
     min-width: 300px;
     background: $color3;
-    .work-section {
-      margin-bottom: 56px;
-      h1 {
-        font-weight: 700;
-        font-size: 1.8rem;
+    .scroll-section {
+      padding: 0;
+      .work-section {
         margin-bottom: 56px;
-      }
-      .project-section {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        // max-width: 1000px;
+        width: 100%;
+        h1 {
+          font-weight: 700;
+          font-size: 1.8rem;
+          margin-bottom: 56px;
+        }
+        .project-section {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          // max-width: 1000px;
 
-        .project-box {
-          position: relative;
-          padding: 30px;
-          cursor: pointer;
-          transition: $btnTransition;
-          height: 400px;
+          .project-box {
+            position: relative;
+            padding: 30px;
+            cursor: pointer;
+            transition: $btnTransition;
+            height: 400px;
 
-          h5 {
-            font-weight: 500;
-            font-size: 1.4rem;
-            text-transform: uppercase;
-            margin-bottom: 1.4rem;
-          }
-          p {
-            font-weight: 300;
-            font-size: 1rem;
-            margin-bottom: 1rem;
-          }
-          &:hover {
-            -webkit-box-shadow: 0px 20px 74px 6px rgba(0, 0, 0, 0.12);
-            -moz-box-shadow: 0px 20px 74px 6px rgba(0, 0, 0, 0.12);
-            box-shadow: 0px 20px 74px 6px rgba(0, 0, 0, 0.12);
-          }
-          .grey-bg {
-            background: #efefef;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
-            opacity: 0;
-            transition: all 0.3s ease-in-out;
-            overflow: hidden;
+            h5 {
+              font-weight: 500;
+              font-size: 1.4rem;
+              text-transform: uppercase;
+              margin-bottom: 1.4rem;
+            }
+            p {
+              font-weight: 300;
+              font-size: 1rem;
+              margin-bottom: 1rem;
+            }
             &:hover {
-              opacity: 0.9;
+              -webkit-box-shadow: 0px 20px 74px 6px rgba(0, 0, 0, 0.12);
+              -moz-box-shadow: 0px 20px 74px 6px rgba(0, 0, 0, 0.12);
+              box-shadow: 0px 20px 74px 6px rgba(0, 0, 0, 0.12);
+            }
+            .grey-bg {
+              background: #efefef;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              right: 0;
+              left: 0;
+              opacity: 0;
+              transition: all 0.3s ease-in-out;
+              overflow: hidden;
+              &:hover {
+                opacity: 0.9;
+                .project-info {
+                  .project-details {
+                    transform: translate3d(0, 0, 0);
+                    opacity: 1;
+                  }
+                  .project-title {
+                    transform: translate3d(0, 0, 0);
+                    opacity: 1;
+                  }
+                }
+              }
               .project-info {
+                position: absolute;
+                bottom: 0;
+                padding: 56px;
+                width: 100%;
                 .project-details {
-                  transform: translate3d(0, 0, 0);
-                  opacity: 1;
+                  position: relative;
+                  font-size: 1.1rem;
+                  text-transform: capitalize;
+                  margin: 0 0 1rem 0;
+                  transform: translate3d(-200px, 0, 0);
+                  transition: transform 0.5s ease-in-out;
+                  opacity: 0;
                 }
                 .project-title {
-                  transform: translate3d(0, 0, 0);
-                  opacity: 1;
+                  font-size: 1.8rem;
+                  text-transform: uppercase;
+                  font-weight: 700;
+                  transform: translate3d(-200px, 0, 0);
+                  transition: transform 0.4s ease-in-out 0.1s;
+                  opacity: 0;
                 }
-              }
-            }
-            .project-info {
-              position: absolute;
-              bottom: 0;
-              padding: 56px;
-              width: 100%;
-              .project-details {
-                position: relative;
-                font-size: 1.1rem;
-                text-transform: capitalize;
-                margin: 0 0 1rem 0;
-                transform: translate3d(-200px, 0, 0);
-                transition: transform 0.5s ease-in-out;
-                opacity: 0;
-              }
-              .project-title {
-                font-size: 1.8rem;
-                text-transform: uppercase;
-                font-weight: 700;
-                transform: translate3d(-200px, 0, 0);
-                transition: transform 0.4s ease-in-out 0.1s;
-                opacity: 0;
-              }
-              .fa-long-arrow-alt-right {
-                position: absolute;
-                bottom: 56px;
-                right: 56px;
-                font-size: 3rem;
+                .fa-long-arrow-alt-right {
+                  position: absolute;
+                  bottom: 56px;
+                  right: 56px;
+                  font-size: 3rem;
+                }
               }
             }
           }
@@ -105,7 +109,7 @@
 
 // Mobiles
 @media (max-width: 767.99px) {
-  .contact {
+  .portfolio {
     &:after {
       content: "";
       display: table;
@@ -134,24 +138,20 @@
       }
     }
     .content-area {
-      width: 100%;
       margin-left: 0;
       height: 100%;
       overflow: auto;
-      .contact-section {
-        width: 100%;
-        float: left;
-        padding: 20% 20px 0;
-      }
-      .img-container {
-        padding: 56px 20px 0;
-        width: 100%;
-        height: auto;
-        .form-section {
-          position: static;
+      left: 0;
+      width: 100%;
+      .scroll-section {
+        .work-section {
           width: 100%;
-          height: auto;
-          overflow: auto;
+          float: left;
+          padding: 20px 20px 0;
+          .project-section {
+            grid-template-columns: 1fr;
+            padding: 0 15px;
+          }
         }
       }
     }
@@ -160,27 +160,24 @@
 
 // Tablets
 @media (min-width: 768px) and (max-width: 991.99px) {
-  .contact {
+  .portfolio {
     .content-area {
       overflow: auto;
+      margin-left: 284px;
+      height: 100%;
       &:after {
         content: "";
         display: table;
         clear: both;
       }
-      .contact-section {
-        width: 70%;
-        float: right;
-        padding: 20% 20px 0;
-      }
-      .img-container {
-        padding: 56px 20px 0;
-        width: 100%;
-        height: auto;
-        margin-top: 8%;
-        .form-section {
-          position: static;
-          width: 100%;
+      .scroll-section {
+        .work-section {
+          float: right;
+          padding: 56px 12% 0 20px;
+          .project-section {
+            grid-template-columns: 1fr;
+            margin-right: 90px;
+          }
         }
       }
     }
@@ -189,7 +186,7 @@
 
 // Laptops
 @media (min-width: 992px) and (max-width: 1199.99px) {
-  .contact {
+  .portfolio {
     .info-section {
       .icon-section {
         a {
@@ -199,30 +196,17 @@
     }
     .content-area {
       overflow: auto;
-
+      margin-left: 284px;
+      margin-bottom: 0;
       &:after {
         content: "";
         display: table;
         clear: both;
       }
-      .contact-section {
-        width: 70%;
-        float: right;
-        padding: 20% 20px 0;
-        max-width: 650px;
-      }
-      .img-container {
-        padding: 56px 20px 0;
-        float: left;
-        height: auto;
-        width: 100%;
-        margin-top: 8%;
-        .form-section {
-          position: static;
-          width: 100%;
+      .scroll-section {
+        .work-section {
           float: left;
-          height: auto;
-          overflow: auto;
+          padding: 56px 20% 0 20px;
         }
       }
     }
@@ -231,23 +215,14 @@
 
 // Large Screens
 @media (min-width: 1200px) {
-  .contact {
-    .info-section {
-    }
+  .portfolio {
     .content-area {
-      .img-container {
-        padding: 56px 20px 0;
-        float: left;
-        .form-section {
-          // position: static;
-          // width: 100%;
+      margin-left: 284px;
+      .scroll-section {
+        .work-section {
+          float: left;
+          padding: 56px 15% 0 56px;
         }
-      }
-      .contact-section {
-        width: 70%;
-        float: left;
-        padding: 20% 60px 0;
-        max-width: 800px;
       }
     }
   }
@@ -255,25 +230,13 @@
 
 //Very Large Screens
 @media (min-width: 1500px) {
-  .contact {
-    .info-section {
-    }
+  .portfolio {
     .content-area {
-      .img-container {
-        padding: 56px 20px 0;
-        float: left;
-        .form-section {
-          // position: static;
-          // width: 100%;
-          left: -150px;
-          width: 500;
+      .scroll-section {
+        .work-section {
+          float: left;
+          padding: 56px 10% 0 56px;
         }
-      }
-      .contact-section {
-        width: 70%;
-        float: left;
-        padding: 20% 60px 0;
-        max-width: 800px;
       }
     }
   }
