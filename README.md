@@ -3,3 +3,5 @@ This is an update of my previous portfolios, relying less on bootstrap to do sty
 
 Future plans to include:
 Developer Blog
+
+Design Credit to Ali Sayed (https://dribbble.com/shots/2517640-Personal-VCard)
